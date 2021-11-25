@@ -31,3 +31,28 @@
 nav {
   width: auto;
 }
+body{
+  background-color:darkseagreen
+}
+h1 {
+  font-family: 'times new roman', Times, serif;
+  text-align : center;
+  font-size : 300%;
+}
+table, th, td{
+      border: 1px solid darkseagreen;
+    }
+td{
+   text-align: left;
+  }
+img{
+  text-align:center;
+}
+h2{
+  font-size : 200%;
+  text-align : center;
+}
+h3{
+  font-size : 125%;
+  text-align : center;
+}

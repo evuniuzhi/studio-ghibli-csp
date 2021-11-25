@@ -31,9 +31,7 @@
 nav {
   width: auto;
 }
-body{
-  background-color:darkseagreen
-}
+<!----------------------------------------------------------->
 h1 {
   font-family: 'times new roman', Times, serif;
   text-align : center;
@@ -41,6 +39,7 @@ h1 {
 }
 table, th, td{
       border: 1px solid darkseagreen;
+      background-color: darkseagreen;
     }
 td{
    text-align: left;

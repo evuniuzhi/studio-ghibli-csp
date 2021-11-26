@@ -5,9 +5,9 @@
 
 
 .item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
+.item2 { grid-area: menu; grid-row-end: 2;}
+.item3 { grid-area: main; grid-row-end: 2;}
+.item4 { grid-area: right; grid-row-end: 2;}
 
 
 .grid-container {

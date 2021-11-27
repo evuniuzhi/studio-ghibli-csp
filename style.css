@@ -5,7 +5,12 @@
 
 
 .item1 { grid-area: header; }
-.item2 { grid-area: menu; grid-row-end: 2;}
+
+.item2 { 
+  grid-area: menu; 
+  grid-row-end: 2;
+}
+
 .item3 { grid-area: main; grid-row-end: 2;}
 .item4 { grid-area: right; grid-row-end: 2;}
 
@@ -27,6 +32,13 @@
   padding: 20px 0;
   font-size: 30px;
 }
+
+
+img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 nav {
   width: auto;

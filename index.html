@@ -10,6 +10,46 @@
   <a href="myNeighborTotoro.html">My Neighbor Totoro</a>  
   <input type="text" placeholder="Search..">
 </div>
+<style>
+  body {
+    font-family: Arial;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
 </head>
 
 <body style = "background-image: url(https://studioghiblimovies.com/wp-content/uploads/2020/03/barcode-scanners-qr-code-2d-code-creative-barcode.jpg); 
@@ -17,5 +57,9 @@ background-repeat: no-repeat; background-attachment: fixed;
 background-size: cover;">
   <h2 style="font-size: 60px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color: burlywood;"> Studio Ghibli</h2>
   <h4 style = "font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; color: tan;"> By Faith Qiao, Evelyn Liu, Aaron Lim</h4>
+  <form class="example" action="action.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
 </body>
 </html>

@@ -102,3 +102,7 @@ h3{
   padding: 300px;
   text-align:center;
 }
+
+input {
+  height: 50px;
+}

@@ -108,6 +108,6 @@ input {
 }
 
 table {
-  width:100%
-  border = transparent
+  border:black;
 }
+

@@ -15,3 +15,12 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+//search button also idk why the thing on the side is green 
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});

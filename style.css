@@ -3,24 +3,6 @@
   margin: 0;
 }
 
-h2 {
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
- }
-
- h4 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
- }
-
  ul {
   list-style-type: none;
   margin: 0;
@@ -59,32 +41,17 @@ ul {
   width: 100%;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
 }
 
-<!----------------------------------------------------------->
-h1 {
-  font-family: 'times new roman', Times, serif;
-  text-align : center;
-  font-size : 300%;
-}
-table, th, td{
-      border: 1px solid darkseagreen;
-      background-color: darkseagreen;
-    }
-td{
-   text-align: left;
-  }
-img{
-  text-align:center;
-}
-h2{
-  font-size : 200%;
-  text-align : center;
-}
-h3{
-  font-size : 125%;
-  text-align : center;
+
+.centerPage {
+  border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
 }

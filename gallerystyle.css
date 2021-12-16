@@ -58,7 +58,10 @@
   }
   body {
     background-color: #e5e5e5;
-    background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) calc(5mm - 1px), #ccc calc(5mm - 1px), #ccc 5mm), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) calc(5mm - 1px), #ccc calc(5mm - 1px), #ccc 5mm);
+    background-image: url(https://i.pinimg.com/originals/11/e4/60/11e460c8743ea45d6e7935486107650d.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
     margin-top: 100px;
   }
   picture, img {

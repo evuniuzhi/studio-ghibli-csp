@@ -1,3 +1,6 @@
+<?php
+  include 'dbh.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
     <div class = "navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a class = "active" href="searchBar.html">Search Bar</a></li>
+        <li><a class = "active" href="index.php">Search Bar</a></li>
         <li><a href="movieGallery.html">Movie Gallery</a></li>
       </ul>
     </div>
@@ -35,29 +38,10 @@ background-size: cover;">
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)">Which movie would you like to know more about?</h1>
-       search: <input type="varchar" name="age" /><input type="submit" />
-    <div class="centerPage">
-      <form action="action.php" form method="post">
-        <input
-          type="submit;"
-          input
-          id="myInput;"
-          text
-          style="font-family: 'Courier New', Courier, monospace"
-          placeholder="Search.."
-          size="90"
-        />
-        <button
-          id="myBtn"
-          onclick="javascript:alert('Hello World!')"
-          text
-          style="font-family: 'Courier New', Courier, monospace"
-        >
-          search
-        </button>
-      </form>
-    </div>
-
+    <form action="search.php" method="POST">
+    <input type="text" name="search" placeholder="Search">
+    <button type="submit" name="submit-search"></button>
+  </form>
   </body>
     
  </html>

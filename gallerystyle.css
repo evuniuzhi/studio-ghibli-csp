@@ -25,8 +25,8 @@
   }
   
   .active {
-    background-color: #04AA6D;
-  }
+  background-color: #5ba379;
+}
   
   li {
     border-right: 1px solid #bbb;
@@ -58,7 +58,7 @@
   }
   body {
     background-color: #e5e5e5;
-    background-image: url(https://i.pinimg.com/originals/11/e4/60/11e460c8743ea45d6e7935486107650d.jpg);
+    background-image: linear-gradient(to right, #97cf8a, #315e26);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;

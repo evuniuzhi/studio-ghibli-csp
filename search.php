@@ -1,11 +1,36 @@
-<?php
-  include 'header.php';
-?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Neighbor Totoro</title>
+    <link rel = "stylesheet" href = style.css>
+    <link rel="icon" type="image/x-icon" href="totoro_icon-removebg-preview (1).png">
+    <script src="script.js"></script>
+    <div class = "navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class = "active" href="index.php">Search Bar</a></li>
+        <li><a href="movieGallery.html">Movie Gallery</a></li>
+      </ul>
+    </div>
+    <style>
+      input{
+        height:30px;
+      }
+      button{
+        height:30px;
+      }
+    </style>
+</head>
 
     <h1>Search Page</h1>
 
     <div class="result-container">
 <?php
+  include 'dbh.php';
     if (isset($_POST['submit-search'])){
         $search = mysqli_real_escape_string($conn, $_POST['search']);
         $sql = "SELECT * FROM studioghib WHERE 
@@ -28,6 +53,8 @@
         }
     }
         
+?><?php
+  include 'dbh.php';
 ?>
     </div>
 </body>

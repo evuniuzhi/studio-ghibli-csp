@@ -99,7 +99,7 @@ h3{
 }
 .result-container {
   width: 900px;
-  background-color: rgb(255, 168, 168);
+  background-color: transparent;
   padding: 30px;
 }
 .result-box{

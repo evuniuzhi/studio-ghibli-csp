@@ -41,7 +41,7 @@ background-size: cover;">
 
   <form action="search.php" method="POST">
     <input type="text" name="search" placeholder="Search">
-    <button type="submit" name="submit-search"></button>
+    <button type="submit" name="submit-search">Search! </button>
   </form>
 
   <h1>front page</h1>
@@ -49,13 +49,13 @@ background-size: cover;">
 
   <div class="result-container">
     <?php
-      $sql = "SELECT * FROM ghib";
+      $sql = "SELECT * FROM studioghib";
       $result = mysqli_query($conn, $sql);
       $queryResults = mysqli_num_rows($result);
 
       if ($queryResults>0) {
         while ($row = mysqli_fetch_assoc($result)){
-          echo "<div>
+          echo "<div class= 'result-box'>
             <h3>".$row['a_movieTitle']."</h3>
             <p>".$row['a_maincharacters']."</p>
             <p>".$row['a_descriptions']."</p>

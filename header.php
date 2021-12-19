@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Neighbor Totoro</title>
     <link rel = "stylesheet" href = style.css>
-    <link rel="icon" type="image/x-icon" href="file:///C:/Users/aaron/Downloads/totoro_icon-removebg-preview%20(1).png">
+    <link rel="icon" type="image/x-icon" href="totoro_icon-removebg-preview (1).png">
     <script src="script.js"></script>
     <div class = "navbar">
       <ul>

@@ -17,7 +17,7 @@
 
                 if ($queryResult > 0){
                 while($row = mysqli_fetch_assoc($result)){
-                    echo "<a href='result.php?'><div class= 'result-box'>
+                    echo "<a href='result.php?title=".$row['a_movieTitle']."'><div class= 'result-box'>
                         <h3>".$row['a_movieTitle']."</h3>
                         <p>".$row['a_maincharacters']."</p>
                         <p>".$row['a_descriptions']."</p>

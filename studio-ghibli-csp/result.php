@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> f675977287fef413ad0c9cf28fdff21b13c9241d
+<?php
+  include 'dbh.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,26 +19,18 @@
       </ul>
     </div>
     <style>
-      
       input{
         height:30px;
       }
       button{
         height:30px;
       }
-      body {
-        background-image: url(https://i.pinimg.com/originals/b7/37/14/b73714046581ab14cb347a4ba2cff999.jpg); 
-      background-repeat: no-repeat; background-attachment: fixed;
-      background-size: cover;
-      }
     </style>
 </head>
 
-  <body>
-  <form action="search.php" method="POST">
-    <input type="text" name="search" placeholder="Search">
-    <button type="submit" name="submit-search">Search! </button>
-  </form>
+  <body style = "background-image: url(https://i.pinimg.com/originals/b7/37/14/b73714046581ab14cb347a4ba2cff999.jpg); 
+background-repeat: no-repeat; background-attachment: fixed;
+background-size: cover;">
   <h1 style = "text-align: center; border-radius: 1em;
   padding: 1em;
   position: absolute;
@@ -48,25 +39,25 @@
   margin-right: -50%;
   transform: translate(-50%, -50%)">Which movie would you like to know more about?</h1>
 
-  <h1>front page</h1>
-  <h2> all results</h2>
+  <h1>Results Page</h1>
 
   <div class="result-container">
     <?php
-    include 'dbh.php';
-      $sql = "SELECT * FROM studioghib";
-      $result = mysqli_query($conn, $sql);
-      $queryResults = mysqli_num_rows($result);
+        $title = mysqli_real_escape_string($conn, $_GET['movieTitle']);
 
-      if ($queryResults>0) {
-        while ($row = mysqli_fetch_assoc($result)){
-          echo "<div class= 'result-box'>
-            <h3>".$row['movieTitle']."</h3>
-            <p>".$row['maincharacters']."</p>
-            <p>".$row['descriptions']."</p>
-          </div>";
+        $sql = "SELECT * FROM studioghib WHERE a_movieTitle='$title'";
+        $result = mysqli_query($conn, $sql);
+        $queryResults = mysqli_num_rows($result);
+
+        if ($queryResults>0) {
+            while ($row = mysqli_fetch_assoc($result)){
+                echo "<div class= 'result-box'>
+                    <h3>".$row['a_movieTitle']."</h3>
+                    <p>".$row['a_maincharacters']."</p>
+                    <p>".$row['a_descriptions']."</p>
+                </div>";
+            }
         }
-      }
     ?>
   </body>
     

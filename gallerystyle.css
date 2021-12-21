@@ -446,4 +446,3 @@
   .tiles .tile:nth-of-type(16):hover .tile-content, .tiles .tile:nth-of-type(16):focus .tile-content {
     box-shadow: 0 2rem 5rem -2.5rem #090600;
   }
-  

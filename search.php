@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Neighbor Totoro</title>
-    <link rel = "stylesheet" href = style.css>
+    <link rel = "stylesheet" href = gallerystyle.css>
     <link rel="icon" type="image/x-icon" href="totoro_icon-removebg-preview (1).png">
     <script src="script.js"></script>
     <div class = "navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a class = "active" href="index.php">Search Bar</a></li>
         <li><a href="movieGallery.html">Movie Gallery</a></li>
+        <li><a class = "active" href="index.php">Search Bar</a></li>
       </ul>
     </div>
     <style>
@@ -23,39 +22,56 @@
       button{
         height:30px;
       }
+      echo{
+        padding-right:30px;
+      }
     </style>
 </head>
 
-    <h1>Search Page</h1>
-
-    <div class="result-container">
+<body style = "">
 <?php
   include 'dbh.php';
     if (isset($_POST['submit-search'])){
-        $search = mysqli_real_escape_string($conn, $_POST['search']);
-        $sql = "SELECT * FROM studioghib WHERE 
-            a_movieTitle LIKE '%search%'  OR a_mainchacters LIKE '%search%' OR a_description LIKE '%search%'";
-        $result = mysqli_query($conn, $sql);
+        $search = $_POST['search'];
+        // echo "Search " .$search. "!";
+        $sql = "SELECT * FROM studioghib";
+        // echo "SQL " .$sql. "!";
+        if ($search != "") {
+          $sql = $sql." WHERE movieTitle LIKE '%$search%' OR maincharacters LIKE '%$search%' OR descriptions LIKE '%$search%' ";
+        }
+        $result = @mysqli_query($conn, $sql);
         $queryResult = mysqli_num_rows($result);
 
-        echo "There are " .$queryResult. "results!";
-
-            if ($queryResult > 0){
+        if(isset($_SERVER['HTTP_REFERER'])) {
+          echo "<a style ='padding-left:30px;'href=".$_SERVER['HTTP_REFERER'].">Back to Search</a>";
+          echo "<br>";
+          echo "<br>";
+      }
+        echo "<p style ='padding-left:30px;'>". "There are " .$queryResult. " results!"."</p>";
+        echo "<br>";
+            if ($result){
             while($row = mysqli_fetch_assoc($result)){
-                echo "<a href='result.php?title=".$row['a_movieTitle']."'><div class= 'result-box'>
-                    <h3>".$row['a_movieTitle']."</h3>
-                    <p>".$row['a_maincharacters']."</p>
-                    <p>".$row['a_descriptions']."</p>
-            </div></a>";
+              echo "<div class= 'result-box'>
+              <h2 style ='padding-left:30px;'>".$row['movieTitle']."</h3>
+              <p style ='padding-left:30px;'>".$row['maincharacters']."</p>
+              <p style ='padding-left:30px;'>".$row['descriptions']."</p>
+              <a href='{$row['wikiLink']};'style ='padding-left:30px;'>Check details</a>
+            </div>";
+            ?>
+            <img src="<?php echo $row['imgLink']; ?>" style ='padding-left:30px;'/>
+            <?php
+            echo "<br>";
             }
         } else {
-            echo "There are no results matching your search!";
+            echo "<p style ='padding-left:30px;'>"."There are no results matching your search!"."</p>";
         }
+        if(isset($_SERVER['HTTP_REFERER'])) {
+          echo "<a style ='padding-left:30px;'href=".$_SERVER['HTTP_REFERER'].">Back to Search</a>";
+          echo "<br>";
+          echo "<br>";
+      }
     }
         
-?><?php
-  include 'dbh.php';
 ?>
-    </div>
 </body>
 </html>

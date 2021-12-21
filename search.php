@@ -22,13 +22,13 @@
       button{
         height:30px;
       }
-      echo{
-        padding-right:30px;
+      body{
+        background-color:white;
       }
     </style>
 </head>
 
-<body style = "">
+<body>
 <?php
   include 'dbh.php';
     if (isset($_POST['submit-search'])){
@@ -52,10 +52,10 @@
             if ($result){
             while($row = mysqli_fetch_assoc($result)){
               echo "<div class= 'result-box'>
-              <h2 style ='padding-left:30px;'>".$row['movieTitle']."</h3>
-              <p style ='padding-left:30px;'>".$row['maincharacters']."</p>
-              <p style ='padding-left:30px;'>".$row['descriptions']."</p>
-              <a href='{$row['wikiLink']};'style ='padding-left:30px;'>Check details</a>
+              <h2 style ='padding-left:30px;padding-bottom:10px;'>".$row['movieTitle']."</h3>
+              <p style ='padding-left:30px;'>"."Main Characters: ".$row['maincharacters']."</p>
+              <p style ='padding-left:30px;'>"."Short Summary: ".$row['descriptions']."</p>
+              <a href='{$row['wikiLink']};' style ='padding-left:30px;padding-bottom:10px;'>Check details</a>
             </div>";
             ?>
             <img src="<?php echo $row['imgLink']; ?>" style ='padding-left:30px;'/>

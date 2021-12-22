@@ -5,6 +5,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<h1 onclick="openNav()" 
+    style="background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    border: 10px solid #f1f1f1;
+    top: 10%;
+    left: 50%;
+    transform: translate(65%, -50%);
+    width: 600px;
+    padding: 20px;
+    text-align: center;"> Result</h1>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

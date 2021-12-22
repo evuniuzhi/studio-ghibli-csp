@@ -26,9 +26,6 @@
       button{
         height:30px;
       }
-      body{
-        background-color:white;
-      }
     </style>
 </head>
 

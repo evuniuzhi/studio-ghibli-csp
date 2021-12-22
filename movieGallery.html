@@ -2,20 +2,40 @@
 	<head><title>Movie Gallery</title></head>
 <link rel = "stylesheet" href ="gallerystyle.css">
 <link rel="icon" type="image/x-icon" href="totoro_icon-removebg-preview (1).png">
-<ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a class = "active" href="movieGallery.html">Movie Gallery</a></li>
-	<li><a href="index.php">Search Bar</a></li>
-  </ul>
+<div id="myNav" class="overlay">
+
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div class="overlay-content">
+	  <a href="index.html">Home</a>
+	  <a href="movieGallery.html">Movie Gallery</a>
+	  <a href="index.php">Search</a>
+	</div>
+  </div>
+
+  <script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+  </script>
+
+<h1 onclick="openNav()" 
+style="background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+color: white;
+font-weight: bold;
+font-size: 60px;
+border: 10px solid #f1f1f1;
+top: 10%;
+left: 50%;
+transform: translate(65%, -50%);
+width: 600px;
+padding: 20px;
+text-align: center;"> Movie Gallery</h1>
+
 <body>
-	<h2 style="font-size: 60px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-	 color:whitesmoke;
-	position: absolute;
-	top: 15%;
-	left: 50%;
-	margin-right: -50%;
-	margin-bottom: 10%;
-	transform: translate(-50%, -50%)"> Movie Gallery</h2>
 <tiles class="tiles">
 	<tile class="tile">
 		<content class="tile-content">

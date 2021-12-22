@@ -101,30 +101,48 @@ setInterval(loop, 1000 / 60);
 <title>Studio Ghibli Project</title>
 <link rel = "stylesheet" href = style.css>
 <link rel="icon" type="image/x-icon" href="totoro_icon-removebg-preview (1).png">
-<div class = "navbar">
-  <ul>
-    <li><a class = "active" href="index.html">Home</a></li>
-    <li><a href="movieGallery.html">Movie Gallery</a></li>
-    <li><a href="index.php">Search Bar</a></li>
-  </ul>
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="movieGallery.html">Movie Gallery</a>
+    <a href="index.php">Search</a>
+  </div>
 </div>
+<!-- Use any element to open/show the overlay navigation menu -->
+
 </head>
+
+<script>
+  /* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
 
   
 <body style = "background-image: url(https://studioghiblimovies.com/wp-content/uploads/2020/03/barcode-scanners-qr-code-2d-code-creative-barcode.jpg); 
 background-repeat: no-repeat; background-attachment: fixed;
 background-size: cover;">
-  <h2 style="background-color: rgb(0,0,0); /* Fallback color */
+  <h2 onclick="openNav()" style="background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
   font-size: 80px;
   border: 10px solid #f1f1f1;
   position: fixed; /* Stay fixed */
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   width: 300px;
   padding: 20px;
   text-align: center;"> Studio Ghibli</h2>

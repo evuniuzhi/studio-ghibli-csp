@@ -12,13 +12,23 @@
     <link rel = "stylesheet" href = gallerystyle.css>
     <link rel="icon" type="image/x-icon" href="totoro_icon-removebg-preview (1).png">
     <script src="script.js"></script>
-    <div class = "navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="movieGallery.html">Movie Gallery</a></li>
-        <li><a class = "active" href="index.php">Search Bar</a></li>
-      </ul>
-    </div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="movieGallery.html">Movie Gallery</a>
+          <a href="index.php">Search</a>
+        </div>
+    </div> 
+      </head>
+      <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      </script>      
     <style>
       input{
         height:30px;
